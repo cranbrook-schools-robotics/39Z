@@ -28,11 +28,11 @@
  */
 void operatorControl() {
 		while (1) {
-        motorSet(2,joystickGetAnalog(1, 2)); // vertical axis on left joystick
-        motorSet(3,joystickGetAnalog(1, 4)); // vertical axis on right? joystick
+        motorSet(2,joystickGetAnalog(1, 3)); // vertical axis on left joystick
+        motorSet(3,joystickGetAnalog(1, 2)); // vertical axis on right? joystick
 
-				motorSet(9,joystickGetAnalog(1, 2)); // vertical axis on left joystick
-        motorSet(8,joystickGetAnalog(1, 4)); // vertical axis on right? joystick
+				motorSet(9,joystickGetAnalog(1, 3)); // vertical axis on left joystick
+        motorSet(8,joystickGetAnalog(1, 2)); // vertical axis on right? joystick
         delay(20);
 		}
 }
