@@ -6,7 +6,7 @@
  * PROS contains FreeRTOS (http://www.freertos.org) whose source code may be
  * obtained from http://sourceforge.net/projects/freertos/files/ or on request.
  */
-
+#include "encoder.h"
 #include "main.h"
 
 /*
@@ -34,4 +34,5 @@ void initializeIO() {
  * can be implemented in this task if desired.
  */
 void initialize() {
+  initEncoder();
 }

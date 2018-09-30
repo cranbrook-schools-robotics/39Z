@@ -8,6 +8,7 @@
  */
 
 #include "main.h"
+#include "encoder.h"
 
 /*
  * Runs the user operator control code. This function will be started in its own task with the
@@ -33,6 +34,12 @@ void operatorControl() {
 
 				motorSet(9,joystickGetAnalog(1, 2)); // vertical axis on left joystick
         motorSet(8,joystickGetAnalog(1, 4)); // vertical axis on right? joystick
+
+				tick();
+				lcdSetText(uart1, 1, "");
+				lcdSetText(uart1, 2, "");
+				lcdPrint(uart1, 1, "%d",x);
+				lcdPrint(uart1, 2, "%d",y);
         delay(20);
 		}
 }

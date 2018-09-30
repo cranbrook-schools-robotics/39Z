@@ -1,3 +1,5 @@
+
+
 /** @file main.h
  * @brief Header file for global functions
  *
@@ -26,11 +28,24 @@
 #define MAIN_H_
 
 #include <API.h>
-
+#include <math.h>   
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#define WHEEL_DISTANCE 15.369685039370078 //in
+//#define WHEEL_CIRCUMFERENCE 12.4674228142 //in
+#define WHEEL_RADIUS 4 //in
+#define PI 3.1415926535897932384626433833
+
+#define LEFT_FRONT 2
+#define LEFT_BACK 8
+#define RIGHT_FRONT 3
+#define RIGHT_BACK 9
+
+#define LEFT_ENCODER 1
+#define RIGHT_ENCODER 2
 
 // A function prototype looks exactly like its declaration, but with a semicolon instead of
 // actual code. If a function does not match a prototype, compile errors will occur.
