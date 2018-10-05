@@ -35,4 +35,6 @@ void initializeIO() {
  */
 void initialize() {
   initEncoder();
+  lcdInit(uart1);
+  lcdClear(uart1);
 }

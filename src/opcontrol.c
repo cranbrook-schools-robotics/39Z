@@ -29,17 +29,15 @@
  */
 void operatorControl() {
 		while (1) {
-        motorSet(2,joystickGetAnalog(1, 3)); // vertical axis on left joystick
-        motorSet(3,joystickGetAnalog(1, 2)); // vertical axis on right? joystick
+        motorSet(RIGHT_FRONT,joystickGetAnalog(1, 3)); // vertical axis on left joystick
+        motorSet(LEFT_FRONT,joystickGetAnalog(1, 2)); // vertical axis on right? joystick
 
-				motorSet(9,joystickGetAnalog(1, 3)); // vertical axis on left joystick
-        motorSet(8,joystickGetAnalog(1, 2)); // vertical axis on right? joystick
+				motorSet(RIGHT_BACK,joystickGetAnalog(1, 3)); // vertical axis on left joystick
+        motorSet(LEFT_BACK,joystickGetAnalog(1, 2)); // vertical axis on right? joystick
 
 				tick();
-				lcdSetText(uart1, 1, "");
-				lcdSetText(uart1, 2, "");
-				lcdPrint(uart1, 1, "%d",x);
-				lcdPrint(uart1, 2, "%d",y);
+				lcdPrint(uart1, 1, "%d",leftEncoder);
+				lcdPrint(uart1, 2, "%d",rightEncoder);
         delay(20);
 		}
 }
